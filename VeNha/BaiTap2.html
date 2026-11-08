@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Bài tập 2- Định dạng văn bản | Bài tập CSS</title>
+    <link rel="stylesheet" href="assets/common.css">
+    <style>
+        .demo-panel {
+            border: 1px solid #e6ebee;
+            padding: 24px;
+            border-radius: 16px;
+            margin: 20px 0
+        }
+
+        .ueh {
+            color: blue;
+            text-align: center;
+            font-weight: bold;
+            text-decoration: underline;
+            font-size: 30px;
+            margin: 15px 0
+        }
+
+        .faculty {
+            color: red;
+            text-align: right;
+            font-style: italic;
+            border: 3px dotted yellow;
+            border-radius: 15px;
+            background: gray;
+            font-size: 15px;
+            opacity: .5;
+            padding: 14px;
+            margin: 15px 0
+        }
+
+        #demotext {
+            color: #A7DD3C;
+            background: #FFFFFF;
+            text-shadow: 2px 0 0px #800040, 3px 2px 0px rgba(77, 0, 38, 0.5), 3px 0 3px #FF002B, 5px 0 3px #800015, 6px 2px 3px rgba(77, 0, 13, 0.5), 6px 0 9px #FF5500, 8px 0 9px #802A00, 9px 2px 9px rgba(77, 25, 0, 0.5), 9px 0 18px #FFD500, 11px 0 18px #806A00, 12px 2px 18px rgba(77, 66, 0, 0.5), 12px 0 30px #D4FF00, 14px 0 30px #6A8000, 15px 2px 30px rgba(64, 77, 0, 0.5), 15px 0 45px #80FF00, 17px 0 45px #408000, 17px 2px 45px rgba(38, 77, 0, 0.5);
+            font-family: Arial, sans-serif;
+            font-weight: 900;
+            font-size: clamp(34px, 7vw, 58px);
+            width: max-content;
+            max-width: 90%;
+            padding: 15px 20px;
+            margin-bottom: 34px
+        }
+
+        .pattern {
+            background-image: url('assets/bit-pattern.png');
+            background-repeat: repeat;
+            background-size: 100px 100px;
+            background-attachment: fixed;
+            background-color: #fbfdfb
+        }
+
+        .pattern p {
+            background: #ffffffed;
+            padding: 12px;
+            border-radius: 8px;
+            max-width: 650px
+        }
+
+        .overflow-row {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 26px
+        }
+
+        .overflow-row section {
+            min-width: 0
+        }
+
+        .overflow-row h3 {
+            font-size: 13px;
+            min-height: 40px
+        }
+
+        .clip {
+            width: 100px;
+            height: 50px;
+            box-sizing: border-box;
+            overflow: hidden;
+            border: 1px solid #007e89;
+            margin: 0;
+            font-size: 12px
+        }
+
+        .ellipsis {
+            max-width: 100px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            border: 1px solid #007e89;
+            margin: 0
+        }
+
+        .nowrap {
+            white-space: nowrap;
+            max-width: 100%;
+            overflow-x: auto;
+            border: 1px solid #007e89;
+            margin: 0;
+            font-size: 12px
+        }
+
+        @media(max-width:700px) {
+            .overflow-row {
+                grid-template-columns: 1fr
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="top-nav"><a class="brand" href="index.html">HOA</a><a href="index.html">← Trang
+            danh sách bài tập</a></nav>
+    <main class="wrap"><span class="eyebrow">Bài tập 2 - Các yêu cầu a–e</span>
+        <h1 class="page-title">Thực hành định dạng CSS</h1>
+        <p class="subtle">Mỗi vùng bên dưới tương ứng một yêu cầu trong đề.</p>
+        <div class="demo-panel"><span class="demo-tag">2a</span>
+            <p class="ueh">Đại học UEH</p>
+        </div>
+        <div class="demo-panel"><span class="demo-tag">2b</span>
+            <p class="faculty">Khoa CNTTD</p>
+        </div>
+        <div class="demo-panel"><span class="demo-tag">2c </span>
+            <div id="demotext">BIT-UEH</div>
+        </div>
+        <div class="demo-panel pattern"><span class="demo-tag">2d</span></div>
+        <div class="demo-panel"><span class="demo-tag">2e · overflow, text-overflow, white-space</span>
+            <p>Đoạn văn: Nhu cầu xã hội Ngành Thương mại điện tử (TMĐT) tại Việt Nam hiện nay đang có những bước tăng trưởng mạnh mẽ và ngày càng đóng góp nhiều hơn cho sự phát triển kinh tế xã hội của đất nước. Thị trường TMĐT Việt Nam đã trở nên sôi động hơn khi có nhiều</p>
+            <div class="overflow-row">
+                <section>
+                    <h3>i. Rộng 100px, cao 50px; ẩn nội dung bị tràn</h3>
+                    <p class="clip">Nhu cầu xã hội Ngành Thương mại điện tử (TMĐT) tại Việt Nam hiện nay đang có những bước tăng trưởng mạnh mẽ và ngày càng đóng góp nhiều hơn cho sự phát triển kinh tế xã hội của đất nước. Thị trường TMĐT Việt Nam đã trở nên sôi động hơn khi có nhiều</p>
+                </section>
+                <section>
+                    <h3>ii. Cắt nội dung bị tràn với dấu ...</h3>
+                    <p class="ellipsis">Nhu cầu xã hội Ngành Thương mại điện tử (TMĐT) tại Việt Nam hiện nay đang có những bước tăng trưởng mạnh mẽ và ngày càng đóng góp nhiều hơn cho sự phát triển kinh tế xã hội của đất nước. Thị trường TMĐT Việt Nam đã trở nên sôi động hơn khi có nhiều</p>
+                </section>
+                <section>
+                    <h3>iii. white-space: nowrap</h3>
+                    <p class="nowrap">Nhu cầu xã hội Ngành Thương mại điện tử (TMĐT) tại Việt Nam hiện nay đang có những bước tăng trưởng mạnh mẽ và ngày càng đóng góp nhiều hơn cho sự phát triển kinh tế xã hội của đất nước. Thị trường TMĐT Việt Nam đã trở nên sôi động hơn khi có nhiều</p>
+                </section>
+            </div>
+            <p class="subtle">Vùng (iii) có thể cuộn ngang để quan sát nội dung không xuống dòng do nowrap.</p>
+        </div>
+    </main>
+    <footer class="site-footer">Phát triển ứng dụng WEB/TMĐT · Tuần 3 · Bài tập CSS · <a href="index.html">Về trang
+            chủ</a></footer>
+</body>
+
+</html>

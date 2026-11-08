@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Bài tập 6 – Portfolio | Bài tập CSS</title>
+    <link rel="stylesheet" href="assets/common.css">
+    <style>
+        .portfolio {
+            max-width: 1080px;
+            margin: 60px auto;
+            padding: 0 25px
+        }
+
+        .portfolio header {
+            background: #f6f6f6;
+            text-align: center;
+            padding: 24px 12px 27px
+        }
+
+        .portfolio h2 {
+            font: bold 28px Arial, sans-serif;
+            color: #1e1e1e;
+            margin: 0
+        }
+
+        .short-line {
+            width: 60px;
+            height: 2px;
+            background: #15bbad;
+            margin: 16px auto 28px
+        }
+
+        .list-tab {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 17px
+        }
+
+        .list-tab li {
+            display: inline-block
+        }
+
+        .list-tab a {
+            font: 12px Arial, sans-serif;
+            color: #222;
+            text-decoration: none
+        }
+
+        .list-tab li:first-child a,
+        .list-tab a:hover {
+            color: #18b6aa
+        }
+
+        .galerry {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 20px;
+            list-style: none;
+            margin: 13px 0;
+            padding: 0
+        }
+
+        .galerry li a {
+            display: block
+        }
+
+        .galerry img {
+            display: block;
+            width: 100%;
+            height: auto;
+            aspect-ratio: 350/260;
+            object-fit: cover
+        }
+
+        .galerry li a:hover img {
+            filter: brightness(.95)
+        }
+
+        @media(max-width:610px) {
+            .galerry {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 10px
+            }
+
+            .portfolio {
+                margin: 30px auto;
+                padding: 0 15px
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="top-nav"><a class="brand" href="index.html">HOA</a><a href="index.html">← Trang
+            danh sách bài tập</a></nav>
+    <main class="wrap"><span class="eyebrow">Bài tập 6</span>
+    <main class="portfolio">
+        <header>
+            <h2>MY PORTFOLIO</h2>
+            <div class="short-line"></div>
+            <ul class="list-tab">
+                <li><a href="#gallery">All</a></li>
+                <li><a href="#gallery">Web App</a></li>
+                <li><a href="#gallery">UI/UX</a></li>
+                <li><a href="#gallery">Graphics Design</a></li>
+                <li><a href="#gallery">Mobile App</a></li>
+                <li><a href="#gallery">Branding</a></li>
+                <li><a href="#gallery">Marketing</a></li>
+            </ul>
+        </header>
+        <ul id="gallery" class="galerry">
+            <li><a href="#gallery" aria-label="Hình dự án 1"><img src="assets/placeholder.svg"
+                        alt="Học Web Chuẩn - mẫu hình 1"></a></li>
+            <li><a href="#gallery" aria-label="Hình dự án 2"><img src="assets/placeholder.svg"
+                        alt="Học Web Chuẩn - mẫu hình 2"></a></li>
+            <li><a href="#gallery" aria-label="Hình dự án 3"><img src="assets/placeholder.svg"
+                        alt="Học Web Chuẩn - mẫu hình 3"></a></li>
+            <li><a href="#gallery" aria-label="Hình dự án 4"><img src="assets/placeholder.svg"
+                        alt="Học Web Chuẩn - mẫu hình 4"></a></li>
+            <li><a href="#gallery" aria-label="Hình dự án 5"><img src="assets/placeholder.svg"
+                        alt="Học Web Chuẩn - mẫu hình 5"></a></li>
+            <li><a href="#gallery" aria-label="Hình dự án 6"><img src="assets/placeholder.svg"
+                        alt="Học Web Chuẩn - mẫu hình 6"></a></li>
+            <li><a href="#gallery" aria-label="Hình dự án 7"><img src="assets/placeholder.svg"
+                        alt="Học Web Chuẩn - mẫu hình 7"></a></li>
+            <li><a href="#gallery" aria-label="Hình dự án 8"><img src="assets/placeholder.svg"
+                        alt="Học Web Chuẩn - mẫu hình 8"></a></li>
+            <li><a href="#gallery" aria-label="Hình dự án 9"><img src="assets/placeholder.svg"
+                        alt="Học Web Chuẩn - mẫu hình 9"></a></li>
+        </ul>
+    </main>
+    <footer class="site-footer">Phát triển ứng dụng TMĐT - Tuần 3 - Bài tập CSS <a href="index.html">Về trang
+            chủ</a></footer>
+</body>
+
+</html>

@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Bài tập 9 – Font Awesome | Bài tập CSS</title>
+    <link rel="stylesheet" href="assets/common.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <style>
+        .icon-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 16px;
+            margin: 32px 0
+        }
+
+        .icon-grid>div {
+            background: #f0f9f8;
+            text-align: center;
+            border-radius: 15px;
+            padding: 32px 10px;
+            display: grid;
+            gap: 10px
+        }
+
+        .icon-grid i {
+            font-size: 43px;
+            color: #088b94
+        }
+
+        .icon-grid strong {
+            font-size: 13px
+        }
+
+        .notice {
+            font-size: 13px;
+            color: #6e7881
+        }
+
+        @media(max-width:520px) {
+            .icon-grid {
+                grid-template-columns: repeat(2, 1fr)
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="top-nav"><a class="brand" href="index.html">HOA</a><a href="index.html">← Trang
+            danh sách bài tập</a></nav>
+    <main class="wrap"><span class="eyebrow">Bài tập 9</span>
+        <h1 class="page-title">Font Awesome Icons</h1>
+        <p class="subtle">Thực hành nhúng thư viện biểu tượng Font Awesome bằng CSS CDN và dùng class
+            <code>fa-solid</code>/<code>fa-brands</code>.</p>
+        <div class="icon-grid">
+            <div><i class="fa-solid fa-house" aria-hidden="true"></i><strong>Home</strong></div>
+            <div><i class="fa-solid fa-user-graduate" aria-hidden="true"></i><strong>Student</strong></div>
+            <div><i class="fa-solid fa-code" aria-hidden="true"></i><strong>Code</strong></div>
+            <div><i class="fa-solid fa-envelope" aria-hidden="true"></i><strong>Email</strong></div>
+            <div><i class="fa-brands fa-github" aria-hidden="true"></i><strong>GitHub</strong></div>
+            <div><i class="fa-solid fa-heart" aria-hidden="true"></i><strong>Favorite</strong></div>
+        </div>
+        <p class="notice">Lưu ý: Icon Font Awesome tải từ CDN, vì vậy cần kết nối Internet khi mở bài này.</p>
+    </main>
+    <footer class="site-footer">Phát triển ứng dụng TMĐT - Tuần 3 - Bài tập CSS <a href="index.html">Về trang
+            chủ</a></footer>
+</body>
+
+</html>
